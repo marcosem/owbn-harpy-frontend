@@ -4,9 +4,21 @@
   "repository": "https://github.com/marcosem/owbn-harpy-frontend.git",
   "author": "Marcos Mathias <marcos-github@memathias.com>",
   "dependencies": {
+    "@rocketseat/unform": "^1.5.1",
+    "axios": "^0.19.0",
+    "history": "^4.9.0",
+    "polished": "^3.4.1",
+    "prop-types": "^15.7.2",
     "react": "^16.9.0",
+    "react-confirm-alert": "^2.4.1",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-icons": "^3.7.0",
+    "react-perfect-scrollbar": "^1.5.3",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.1.1",
+    "react-toastify": "^5.3.2",
+    "styled-components": "^4.3.2",
+    "yup": "^0.27.0"
   },
   "scripts": {
     "start": "react-app-rewired start",
