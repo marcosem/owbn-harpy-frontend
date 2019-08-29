@@ -6,19 +6,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px;
-
-  img {
-  }
-
-  span {
-    color: #a8a8a8;
-    font-size: 14px;
-    margin: 0 0 5px;
-    font-weight: bold;
-  }
+  padding-top: 140px;
 
   strong {
+    padding: 20px;
     color: #a8a8a8;
     font-size: 25px;
     font-weight: bold;
@@ -28,7 +19,7 @@ export const Container = styled.div`
 export const Content = styled.div`
   width: 100%;
   margin-top: 30px;
-  padding-top: 100px;
+  padding-top: 30px;
   max-width: 315px;
   text-align: center;
   justify-content: center;
@@ -58,6 +49,7 @@ export const Content = styled.div`
       align-self: flex-start;
       margin: 0 0 10px;
       font-weight: bold;
+      align-self: center;
     }
 
     a {

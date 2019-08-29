@@ -19,9 +19,7 @@ export default function SignIn() {
   return (
     <Container>
       <img src={logo} alt="Harpy Network" />
-      <span>Welcome to:</span>
       <strong>Harpy Network</strong>
-
       <Content>
         <Form schema={schema} onSubmit={handleSubmit}>
           <Input name="email" type="email" placeholder="Enter your e-mail" />
