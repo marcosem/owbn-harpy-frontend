@@ -16,21 +16,20 @@ export const SubButton = styled.button.attrs(props => ({
 }))`
   margin: 5px 0 0;
   height: 44px;
-
+  color: #ccc;
   font-size: 16px;
   font-weight: bold;
-  color: #fff;
   border: 0;
   border-radius: 4px;
   transition: background 0.2s;
 
   ${props =>
-    props.blue
+    props.red
       ? css`
-          background: #06236f;
+          background: #440d0f;
         `
       : css`
-          background: #740916;
+          background: #5a9367;
         `}
 
   div {
@@ -40,7 +39,7 @@ export const SubButton = styled.button.attrs(props => ({
 
     span {
       font-size: 16px;
-      color: #fff;
+      color: #ccc;
       margin-left: 6px;
       padding-left: 6px;
     }
@@ -48,12 +47,12 @@ export const SubButton = styled.button.attrs(props => ({
 
   &:hover {
     ${props =>
-      props.blue
+      props.red
         ? css`
-            background: ${darken(0.08, '#06236F')};
+            background: ${darken(0.08, '#440d0f')};
           `
         : css`
-            background: ${darken(0.08, '#740916')};
+            background: ${darken(0.08, '#5a9367')};
           `}
   }
 
@@ -70,5 +69,3 @@ export const SubButton = styled.button.attrs(props => ({
       }
     `}
 `;
-
-//   background: #f94d6a;
