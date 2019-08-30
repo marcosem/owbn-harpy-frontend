@@ -1,10 +1,13 @@
 import React from 'react';
 import { Form, Input } from '@rocketseat/unform';
 import * as Yup from 'yup';
-
-import { Container, Content } from './styles';
+import { useDispatch } from 'react-redux';
+// import { Container, Content } from './styles';
 import HarpyButton from '~/components/HarpyButton';
-import logo from '~/assets/logo_header.png';
+// import Footer from '~/components/Footer';
+// import logo from '~/assets/logo_header.png';
+
+import { signInRequest } from '~/store/modules/auth/actions';
 
 const schema = Yup.object().shape({
   email: Yup.string()
@@ -14,24 +17,28 @@ const schema = Yup.object().shape({
 });
 
 export default function SignIn() {
-  function handleSubmit() {}
+  const dispatch = useDispatch();
+
+  function handleSubmit({ email, password }) {
+    dispatch(signInRequest(email, password));
+  }
 
   return (
-    <Container>
-      <img src={logo} alt="Harpy Network" />
+    <>
+      {/* <img src={logo} alt="Harpy Network" />
       <strong>Harpy Network</strong>
-      <Content>
-        <Form schema={schema} onSubmit={handleSubmit}>
-          <Input name="email" type="email" placeholder="Enter your e-mail" />
-          <Input
-            name="password"
-            type="password"
-            placeholder="Enter your Password"
-          />
+      {/* <Content> */}
+      <Form schema={schema} onSubmit={handleSubmit}>
+        <Input name="email" type="email" placeholder="Enter your e-mail" />
+        <Input
+          name="password"
+          type="password"
+          placeholder="Enter your Password"
+        />
 
-          <HarpyButton type="submit">Login</HarpyButton>
-        </Form>
-      </Content>
-    </Container>
+        <HarpyButton type="submit">Login</HarpyButton>
+      </Form>
+      {/* </Content> */}
+    </>
   );
 }

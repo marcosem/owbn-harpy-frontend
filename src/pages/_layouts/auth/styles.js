@@ -1,18 +1,24 @@
 import styled from 'styled-components';
+import colors from '~/styles/colors';
 
-export const Container = styled.div`
+export const Wrapper = styled.div`
   height: 100%;
-  background: linear-gradient(180deg, #0a0a0a 0%, #4b0101 100%);
+  background: linear-gradient(
+    180deg,
+    ${colors.darkSlateGray} 0%,
+    ${colors.lightSlateGray} 100%
+  );
+
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 140px;
 
   strong {
-    padding: 20px;
-    color: #a8a8a8;
-    font-size: 25px;
-    font-weight: bold;
+    padding: 30px;
+    color: ${colors.light};
+    font-family: Great Vibes, Roboto;
+    font-size: 40px;
   }
 `;
 
@@ -31,7 +37,7 @@ export const Content = styled.div`
     flex-direction: column;
 
     input {
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(28, 35, 33, 0.5);
       border: 0;
       border-radius: 4px;
       height: 44px;
@@ -45,7 +51,7 @@ export const Content = styled.div`
     }
 
     span {
-      color: #f94d6a;
+      color: ${colors.bulgarianRose};
       align-self: flex-start;
       margin: 0 0 10px;
       font-weight: bold;
